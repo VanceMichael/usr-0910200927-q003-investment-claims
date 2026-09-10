@@ -6,7 +6,7 @@ COPY src ./src
 COPY contracts ./contracts
 RUN mvn -q test package
 
-FROM eclipse-temurin:21-jre-alpine
+FROM eclipse-temurin:21-jdk-alpine
 WORKDIR /app
 RUN addgroup -S app && adduser -S app -G app && mkdir /data && chown app:app /data
 COPY --from=build /src/target/investment-claim-reconciler-0.1.0.jar /app/service.jar
