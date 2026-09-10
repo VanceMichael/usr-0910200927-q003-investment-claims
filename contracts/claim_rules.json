@@ -1,0 +1,7 @@
+{
+  "sources": ["investor", "project_owner", "local_representative"],
+  "stages": ["intent", "memorandum", "signed"],
+  "group_states": ["draft", "linked", "locked"],
+  "amount_difference_ratio": "0.05",
+  "disclosure_dimensions": ["industry", "cooperation_stage"]
+}
